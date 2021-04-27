@@ -1,4 +1,3 @@
-Nia Therapeutics Interview question
 
 PROMPT:
 
