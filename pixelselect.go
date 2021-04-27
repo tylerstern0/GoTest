@@ -53,9 +53,9 @@ func PixelSelect(rc_wid, rc_hei int) {
 	}
 
 	// Print each vertex array element in the order of the shuffled index
-	// NB: currently prints sh_ind elements
+	// NB: currently prints sh_ind elements in order
 	for pr_ind := 0; pr_ind < seq_len; pr_ind++ {
-		fmt.Println(sh_ind[pr_ind])
+		fmt.Println(v_names[sh_ind[pr_ind]])
 	}
 
 	return

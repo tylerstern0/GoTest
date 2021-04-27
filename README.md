@@ -16,7 +16,10 @@ Thus the algorithm I've devised runs in O(n) time:
 1. Create a list of length W*H of vertice names                         O(W*H) = O(n)
 2. Create an index of length W*H                                        O(W*H) = O(n)
 3. Shuffle index in place (Fisher-Yates method)                         O(W*H) = O(n)
-4. Print each vertex array element in the order of the shuffled index   O(W*H) = O(n)
+4. Print each coordinate array element in the order of the shuffled index   O(W*H) = O(n)
 
-I considered creating a lookup table for each vertex to delineate whether it had been chosen or not and then randomly traverse across that array, but this runs in O(n^2), a bit slower.
+I considered creating a lookup table for each coordinate to delineate whether it had been chosen or not and then randomly traverse across that array, but this runs in O(n^2), a bit slower.
+
 There's also less efficient methods for shuffling an array, such as creating a temporary array and randomly selecting elements from it and then removing that element from the temp array, but this takes up double the memory and runs in O(n^2) time. The Fisher-Yates method for an in-place shuffle is thus much better and at no cost but the original order (which is simply an ascending count in this case). 
+
+My implementation uses O(n) memory, allocating for the array of coordinate names and the shuffled index used to select from that array.
