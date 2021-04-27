@@ -9,8 +9,8 @@ import (
 )
 
 func main() {
-	fmt.Println("pixel select version 0.2")
-	PixelSelect(15, 3)
+	fmt.Println("pixel select version 1.1")
+	PixelSelect(W, H)
 }
 
 // PixelSelect accepts the dimensions of the rectangle from which to select pixels &
