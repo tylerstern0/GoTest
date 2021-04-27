@@ -19,4 +19,4 @@ Thus the algorithm I've devised runs in O(n) time:
 4. Print each vertex array element in the order of the shuffled index   O(W*H) = O(n)
 
 I considered creating a lookup table for each vertex to delineate whether it had been chosen or not and then randomly traverse across that array, but this runs in O(n^2), a bit slower.
-There's also less efficient methods for shuffling an array, such as creating a temporary array and randomly selecting elements from the original to populate it, but this takes up double the memory. 
+There's also less efficient methods for shuffling an array, such as creating a temporary array and randomly selecting elements from it and then removing that element from the temp array, but this takes up double the memory and runs in O(n^2) time. The Fisher-Yates method for an in-place shuffle is thus much better and at no cost but the original order (which is simply an ascending count in this case). 

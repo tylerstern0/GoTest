@@ -3,7 +3,9 @@ package main
 import (
 	"errors"
 	"fmt"
+	"math/rand"
 	"strconv"
+	"time"
 )
 
 func main() {
@@ -42,6 +44,13 @@ func PixelSelect(rc_wid, rc_hei int) {
 	}
 
 	// Shuffle index
+	rand.Seed(time.Now().UnixNano())
+	for sw := seq_len - 1; sw > 0; sw-- {
+		rn := rand.Intn(sw)
+		temp := sh_ind[sw]
+		sh_ind[sw] = sh_ind[rn]
+		sh_ind[rn] = temp
+	}
 
 	// Print each vertex array element in the order of the shuffled index
 	// NB: currently prints sh_ind elements
