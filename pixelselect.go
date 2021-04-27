@@ -4,12 +4,24 @@ import (
 	"errors"
 	"fmt"
 	"math/rand"
+	"os"
 	"strconv"
 	"time"
 )
 
 func main() {
-	fmt.Println("pixel select version 1.1")
+	fmt.Println("pixel select version 1.0")
+
+	W, err1 := strconv.Atoi(os.Args[1])
+	H, err2 := strconv.Atoi(os.Args[2])
+
+	if err1 != nil {
+		panic(err1)
+	}
+	if err2 != nil {
+		panic(err2)
+	}
+
 	PixelSelect(W, H)
 }
 
